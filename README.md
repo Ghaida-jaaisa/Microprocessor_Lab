@@ -19,7 +19,7 @@ Design Emergency [RED1 : Green , On : Off , Off : On] for 7 times each .
 Design Traffic Light , Red(3s) => Yellow (blink 3 times) => Green(5s) . 
 note : continuously repeat 
 
-## LAB 2 -- 7-Segments
+## LAB 2 -- 7-Segments   || [click here](./LAB 2/)
 #### TASK #1 
 Show the even numbers on 7-Segment using counter
 
