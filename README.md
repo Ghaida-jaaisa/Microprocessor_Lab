@@ -1,7 +1,7 @@
 # 💡 Microprocessor Lab
 ## LAB 1 -- LED's ||  📁 [Open Folder](LAB%201/)
 
-#### TASK #1 || Open File [Open Folder](LAB%201/TASK%201)
+#### TASK #1 ||  [Open File](LAB%201/TASK%201)
 Light one LED started by LED 1
 
 #### TASK #2
