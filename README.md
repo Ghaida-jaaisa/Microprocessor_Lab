@@ -20,7 +20,7 @@ Design Traffic Light , Red(3s) => Yellow (blink 3 times) => Green(5s) .
 note : continuously repeat 
 
 ## LAB 2 -- 7-Segments   
-- [click here](./LAB 2/)
+[Open Folder](./LAB 2/)
 #### TASK #1 
 Show the even numbers on 7-Segment using counter
 
