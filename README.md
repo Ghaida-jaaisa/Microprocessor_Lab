@@ -1,10 +1,10 @@
 # Microprocessor Lab
 ### LAB 1 -- LED's
 #### TASK #1 
-Turn on LED's From LED 1 TO LED 4
+Light one LED started by LED 1
 
 #### TASK #2
-Turn on LED's in reversed order From LED 4 TO LED 1
+Light one LED (reversely) started by LED 4
 
 #### TASK #3
 Light the LED's every two together (4&3 -> 3&2 -> 2&1 -> 1&4)
