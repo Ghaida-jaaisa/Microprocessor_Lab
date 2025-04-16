@@ -1,4 +1,4 @@
-# Microprocessor Lab
+# 💡 Microprocessor Lab
 ## LAB 1 -- LED's || [Open Folder](LAB%201/)
 
 #### TASK #1 
