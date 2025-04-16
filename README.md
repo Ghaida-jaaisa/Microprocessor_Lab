@@ -1,5 +1,5 @@
 # Microprocessor Lab
-### LAB 1 -- LED's
+## LAB 1 -- LED's
 #### TASK #1 
 Light one LED started by LED 1
 
@@ -19,7 +19,7 @@ Design Emergency [RED1 : Green , On : Off , Off : On] for 7 times each .
 Design Traffic Light , Red(3s) => Yellow (blink 3 times) => Green(5s) . 
 note : continuously repeat 
 
-### LAB 2 -- 7-Segments
+## LAB 2 -- 7-Segments
 #### TASK #1 
 Show the even numbers on 7-Segment using counter
 
