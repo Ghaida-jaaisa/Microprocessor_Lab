@@ -24,12 +24,11 @@
 - Repeat **7 times**.
 
 #### 👨‍💻 TASK #6  |  📄 [Open File](LAB%201/TASK%206)  
-🔹 Design **Traffic Light**:  
-- **Red** (3 seconds)  
-- **Yellow** (blink 3 times)  
-- **Green** (5 seconds)  
-- Note: Continuously repeat.
-
+🔹 **Design Traffic Light:**  
+   - **Red 🔴 (3 seconds)**  
+   - **Yellow 🟡 (blink 3 times)**  
+   - **Green 🟢 (5 seconds)**  
+   - Repeat this sequence continuously.
 ---
 
 ## LAB 2 – 7-Segments  |  📁 [Open Folder](LAB%202/)
