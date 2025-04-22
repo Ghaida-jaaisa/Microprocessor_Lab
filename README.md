@@ -44,18 +44,6 @@
 
 ---
 
-## LAB 3 – Dot Matrix - part1  |  📁 [Open Folder](LAB%203/)
-#### 🖥️ TASK #1  |  📄 [Open File](LAB%203/TASK%201)  
-🔹 Task description...
-
-#### 💻 TASK #2  |  📄 [Open File](LAB%203/TASK%202)  
-🔹 Task description...
-
-#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%203/TASK%203)  
-🔹 Task description...
-
----
-
 ## LAB 3 – Keypad  |  📁 [Open Folder](LAB%203%20-%20Keypad/)
 #### 🖥️ TASK #1  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%201)  
 🔹 Show the **number you pressed** on the **7-Segment**.
