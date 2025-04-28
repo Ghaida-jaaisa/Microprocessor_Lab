@@ -1,1 +1,115 @@
+;*****************************************
+;     MDA-Win8086 EXPERIMENT PROGRAM    *
+;     FILENAME  : FND.ASM
+;     PROCESSOR : I8086
+;     8255 TEST
+;*****************************************
+CODE	SEGMENT
+	ASSUME	CS:CODE,DS:CODE,ES:CODE,SS:CODE
+	;
+PPIC_C	EQU	1FH
+PPIC	EQU	1DH
+PPIB	EQU	1BH
+PPIA	EQU	19H
+KEY	EQU	01H
+	;	
+	ORG	1000H
+	
+	MOV AX , 0
+	MOV DS , AX
+	
+	
+	MOV	AL,10000000B
+	OUT	PPIC_C,AL
+	
+	MOV	AL,00000000B
+	OUT	PPIC,AL
+	
+	;
+	MOV	AL,00000000B
+	OUT	PPIA,AL
+	;
+L3: 	MOV	SI,OFFSET DATA
+        CALL    SCAN ; AL = KEY
+        CMP     AL , 00000001B
+        JE     START
+        CMP     AL , 00000010B
+        JE     START
+        CMP     AL , 00000011B
+        JE     START
+        CMP     AL , 00000100B
+        JE     START
+        CMP     AL , 00000101B
+        JE     START
+        JMP L3
+        
 
+START:  MOV DH , AL
+        MOV DL, 10
+        MUL DL
+
+L2:     MOV BL, AL
+	MOV  AL , 01110111B
+L1:     OUT PPIB , AL
+        CALL TIMER
+        ROR AL ,1
+        DEC BL
+        JNZ L1	
+
+
+L4:     MOV	SI,OFFSET DATA
+        MOV     DL , DH
+        MOV      DH , 0
+        ADD     SI, DX	
+        MOV	AL,BYTE PTR CS:[SI]
+	OUT	PPIA,AL
+	CALL	TIMER
+
+        JMP L3
+		
+	;
+	INT	3
+	;		
+TIMER:	MOV	CX,500
+TIMER1:	NOP
+	NOP
+	NOP
+	NOP
+	LOOP	TIMER1
+	RET
+TIMER2:	MOV	CX,0
+TIMER11:NOP
+	NOP
+	NOP
+	NOP
+	LOOP	TIMER11
+	RET
+	;
+DATA:	DB	11000000B
+	DB	11111001B
+	DB	10100100B
+	DB	10110000B
+	DB	10011001B
+	DB	10010010B
+	DB	10000010B
+	DB	11111000B
+	DB	10000000B
+	DB	10010000B
+	DB	00H
+	
+SCAN:	IN	AL,KEY
+	TEST	AL,10000000B
+	JNZ	SCAN
+	TEST	AL,00010000B
+	JNZ	SCAN
+	;
+	AND	AL,00001111B
+	MOV	BYTE PTR K_BUF,AL
+	; key clear
+	OUT	KEY,AL
+	RET
+	;
+	
+K_BUF:	DB	1
+CODE	ENDS
+	END
