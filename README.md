@@ -44,47 +44,47 @@
 
 ---
 
-## LAB 3 – Keypad  |  📁 [Open Folder](LAB%203%20-%20Keypad/)
-#### 🖥️ TASK #1  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%201)  
+## LAB 3 – Keypad  |  📁 [Open Folder](LAB%203/)
+#### 🖥️ TASK #1  |  📄 [Open File](LAB%203/TASK%201)  
 🔹 Show the **number you pressed** on the **7-Segment**.
 
-#### 💻 TASK #2  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%202)  
+#### 💻 TASK #2  |  📄 [Open File](LAB%203/TASK%202)  
 🔹 Let the **7-Segment** start **counting from 0 to 9** **only** if you press **key A**.
 
-#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%203)  
+#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%203/TASK%203)  
 🔹 Let the **green LED flash** for the **pressed key number**.
 
-#### 🖥️ TASK #4  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%204)  
+#### 🖥️ TASK #4  |  📄 [Open File](LAB%203/TASK%204)  
 🔹 Update **Task 3** to **stop flashing** **immediately** once **key 0** is pressed.
 
-#### 💻 TASK #5  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%205)  
+#### 💻 TASK #5  |  📄 [Open File](LAB%203/TASK%205)  
 🔹 Let the **yellow LED flash** for the **pressed key number**, then **show the number** on the **7-Segment**.
 
-#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%203%20-%20Keypad/TASK%206)  
+#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%203/TASK%206)  
 🔹 Update **Task 5** to make the number on **7-Segment disappear** if you press **key F**.
 
 ---
 
-## LAB 4 – Stepper Motor  |  📁 [Open Folder](LAB%204%20-%20Stepper%20Motor/)
-#### 🖥️ TASK #1  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%201)  
+## LAB 4 – Stepper Motor  |  📁 [Open Folder](LAB%204/)
+#### 🖥️ TASK #1  |  📄 [Open File](LAB%204/TASK%201)  
 🔹 Move the **stepping motor counter-clockwise** with **fast motion**.
 
-#### 💻 TASK #2  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%202)  
+#### 💻 TASK #2  |  📄 [Open File](LAB%204/TASK%202)  
 🔹 Let the **stepping motor** move for **90 degrees** and stop.
 
-#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%203)  
+#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%204/TASK%203)  
 🔹 Update **Task 2** to let the **stepper move 90 degrees**, **stop for a while**, then **continue** — repeat **4 times only**.
 
-#### 🖥️ TASK #4  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%204)  
+#### 🖥️ TASK #4  |  📄 [Open File](LAB%204/TASK%204)  
 🔹 Update **Task 3** to **start the motor** only **if you press key F**.
 
-#### 💻 TASK #5  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%205)  
+#### 💻 TASK #5  |  📄 [Open File](LAB%204/TASK%205)  
 🔹 Let the **stepper motor** move for the **(pressed key value × 10)** steps (keys from **1** to **5**).
 
-#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%206)  
+#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%204/TASK%206)  
 🔹 Update **Task 5** to **show the pressed key** on the **7-Segment** **immediately after it stops**.
 
-#### 🖥️ TASK #7  |  📄 [Open File](LAB%204%20-%20Stepper%20Motor/TASK%207)  
+#### 🖥️ TASK #7  |  📄 [Open File](LAB%204/TASK%207)  
 🔹 Update **Task 1**: if you **press key 3**, let the **motor move faster**.
 
 ---
