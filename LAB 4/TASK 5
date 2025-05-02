@@ -29,8 +29,7 @@ KEY	EQU	01H
 	MOV	AL,11111111B
 	OUT	PPIA,AL
 	;
-L3: 	MOV	SI,OFFSET DATA
-        CALL    SCAN ; AL = KEY
+L3:     CALL    SCAN ; AL = KEY
         CMP     AL , 00000001B
         JE     START
         CMP     AL , 00000010B
