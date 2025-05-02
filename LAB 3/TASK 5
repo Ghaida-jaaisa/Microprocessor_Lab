@@ -29,10 +29,10 @@ L2:     MOV	SI,OFFSET DATA
         MOV     BL , AL
         CMP     BL  , 0
         JE L2
-LED :   MOV AL , 00000100B
+LED :   MOV AL , 11110100B
         OUT PPIB , AL
         CALL TIMER
-        MOV AL , 00000000B
+        MOV AL , 11110000B
         OUT PPIB , AL
         CALL TIMER
         DEC BL
@@ -41,14 +41,7 @@ LED :   MOV AL , 00000100B
         MOV AL,BYTE PTR CS:[SI]
         OUT PPIA , AL
         CALL TIMER
-        JMP L2
-;L1:	MOV	AL,BYTE PTR CS:[SI]
-;	CMP	AL,00H
-;	JE	L2
-;	OUT	PPIA,AL
-;	CALL	TIMER
-;	INC	SI
-	;JMP	L1		
+        JMP L2	
 	;
 	INT	3
 	;		
@@ -89,5 +82,3 @@ SCAN:	IN	AL,KEY
 K_BUF:	DB	1
 CODE	ENDS
 	END
-
-
