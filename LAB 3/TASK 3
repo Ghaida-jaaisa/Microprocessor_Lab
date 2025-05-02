@@ -27,22 +27,15 @@ L2:     CALL    SCAN ; AL = KEY
         MOV     BL , AL
         CMP     BL  , 0
         JE L2
-LED :   MOV AL , 00000010B
+LED :   MOV AL , 11110010B
         OUT PPIB , AL
         CALL TIMER
-        MOV AL , 00000000B
+        MOV AL , 11110000B
         OUT PPIB , AL
         CALL TIMER
         DEC BL
         JNZ LED
         JMP L2
-;L1:	MOV	AL,BYTE PTR CS:[SI]
-;	CMP	AL,00H
-;	JE	L2
-;	OUT	PPIA,AL
-;	CALL	TIMER
-;	INC	SI
-	;JMP	L1		
 	;
 	INT	3
 	;		
