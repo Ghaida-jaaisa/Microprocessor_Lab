@@ -1,1 +1,97 @@
 
+; Display the number on the 7-seg once it's pressed, and when 'F' is pressed clear the 7-seg display.
+
+CODE	SEGMENT
+	ASSUME	CS:CODE,DS:CODE,ES:CODE,SS:CODE
+	;
+PPIC_C	EQU	1FH
+PPIC	EQU	1DH
+PPIB	EQU	1BH
+PPIA	EQU	19H
+KEY	EQU	01H
+	;	
+	ORG	1000H
+	MOV	AL,10000000B
+	OUT	PPIC_C,AL
+	;
+	MOV	AL,11110000B
+	OUT	PPIB,AL
+	;
+	MOV	AL,00000000B
+	OUT	PPIC,AL
+	;
+L2:     MOV	SI,OFFSET DATA
+        CALL    SCAN ; AL = KEY
+        MOV DX, AX
+        ADD SI , DX
+        MOV AL,BYTE PTR CS:[SI]
+        OUT PPIA , AL
+        CALL TIMER
+        MOV     BL , DL
+        CMP     BL  , 0
+        JE L2
+LED :   MOV AL , 11110100B
+        OUT PPIB , AL
+        CALL TIMER
+        CALL SCAN_F
+CONTINUE: MOV AL , 11110000B
+        OUT PPIB , AL
+        CALL TIMER
+DEC BL
+        JNZ LED
+        JMP L2	
+	;
+	INT	3
+	;		
+TIMER:	MOV	CX,0
+TIMER1:	NOP
+	NOP
+	NOP
+	NOP
+	LOOP	TIMER1
+	RET
+	;
+DATA:	DB	11000000B
+	DB	11111001B
+	DB	10100100B
+	DB	10110000B
+	DB	10011001B
+	DB	10010010B
+	DB	10000010B
+	DB	11111000B
+	DB	10000000B
+	DB	10010000B
+	DB	00H
+	
+	
+SCAN:	IN	AL,KEY
+	TEST	AL,10000000B
+	JNZ	SCAN
+	TEST	AL,00010000B
+	JNZ	SCAN
+	;
+	AND	AL,00001111B
+	MOV	BYTE PTR K_BUF,AL
+	; key clear
+	OUT	KEY,AL
+	RET
+	;
+	
+SCAN_F  : IN AL,KEY
+          TEST AL , 10000000B
+          JNZ CONTINUE
+          TEST AL , 00010000B
+          JNZ CONTINUE
+          AND AL , 00001111B
+           CMP AL , 00001111B
+           JNE   CONTINUE
+           MOV AL , 0FFH
+           OUT PPIA , AL
+           CALL TIMER
+           OUT KEY , AL
+           JMP L2
+   	
+	
+K_BUF:	DB	1
+CODE	ENDS
+	END
