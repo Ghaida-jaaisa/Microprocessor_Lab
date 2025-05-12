@@ -1,1 +1,45 @@
 
+CODE SEGMENT
+ASSUME CS :CODE , DS :CODE ,ES :CODE ,SS :CODE
+
+
+PPIC_C EQU 1EH
+PPIC EQU 1CH
+PPIB EQU 1AH
+PPIA EQU 18H
+
+ORG 1000H
+
+MOV AL , 80H
+OUT PPIC_C , AL
+;
+
+
+;
+L1:
+
+     MOV AL , 00110011B
+     OUT PPIB , AL
+      ;
+      MOV AL , 00001100B
+      OUT PPIC , AL
+      ;
+     MOV AL , 11110010B
+     OUT PPIA , AL
+     ;
+     INT 3
+     ;
+     
+TIMER :
+       MOV CX , 00FFH
+ TIMER1:     NOP
+       NOP
+       NOP
+       NOP
+       LOOP TIMER1
+       RET
+       
+       
+       CODE ENDS
+       END
+       
