@@ -101,6 +101,7 @@
 
 #### 🖥️ TASK #4  |  📄 [Open File](LAB%205/TASK%204)  
 🖼️🔆 Light the **specific shape** as shown in the **figure**.
+![matrix](https://github.com/user-attachments/assets/f5915473-36cf-48a8-adc9-ea6f0611ce37)
 
 
 #### 💻 TASK #5  |  📄 [Open File](LAB%205/TASK%205)  
@@ -115,8 +116,6 @@
 
 
 
-
-![Screenshot (421)](https://github.com/user-attachments/assets/26fe317d-4801-419f-a8dc-618e536c1536)
 
 
 
