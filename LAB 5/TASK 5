@@ -1,1 +1,80 @@
 
+CODE SEGMENT
+ASSUME CS :CODE , DS :CODE ,ES :CODE ,SS :CODE
+
+
+PPIC_C EQU 1EH
+PPIC EQU 1CH
+PPIB EQU 1AH
+PPIA EQU 18H
+ KEY EQU 01H
+ORG 1000H
+
+MOV AL , 80H
+OUT PPIC_C , AL
+;
+
+
+;
+L1:  CALL SCAN
+      CMP AL, 0
+      JE RESIGN
+     ; AL IS COUNTER
+       MOV BL , AL
+       MOV AH , 0
+       MOV AL , 1
+       MOV DL , 2
+MM:    MUL  DL
+       DEC BL
+       JNZ MM
+       
+
+       ; RESULT IS AL
+       DEC AL ;
+  CON   :OUT PPIC , AL
+        
+        
+
+     MOV AL , 0FFH
+     OUT PPIB , AL
+      ;
+     MOV AL , 00
+     OUT PPIA , AL
+     ;
+
+     ;CALL TIMER
+     JMP L1
+     INT 3
+     
+     ;
+     
+TIMER :
+       MOV CX , 00FFH
+ TIMER1:     NOP
+       NOP
+       NOP
+       NOP
+       LOOP TIMER1
+       RET
+       
+SCAN : IN AL , KEY
+       TEST AL, 80H
+       JNZ SCAN
+       TEST AL, 10H
+       JNZ SCAN
+       AND AL, 0FH
+       CMP AL, 08H
+       JG SCAN
+
+       MOV BYTE PTR K_BUF, AL
+       OUT KEY, AL
+       RET
+
+RESIGN :
+        MOV AL , 0
+        JMP CON
+
+ K_BUF DB 1
+       CODE ENDS
+       END
+       
