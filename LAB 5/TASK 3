@@ -1,1 +1,53 @@
 
+CODE SEGMENT
+ASSUME CS :CODE , DS :CODE ,ES :CODE ,SS :CODE
+
+
+PPIC_C EQU 1EH
+PPIC EQU 1CH
+PPIB EQU 1AH
+PPIA EQU 18H
+
+ORG 1000H
+
+MOV AL , 80H
+OUT PPIC_C , AL
+;
+MOV AL , 3CH
+OUT PPIC , AL
+
+;
+
+MOV AL , 0C3H
+OUT PPIA , AL
+MOV BL, AL
+;
+     MOV DL , 25
+     MOV AL , 0C3H
+L1 : OUT PPIB , AL
+     MOV AL, BL
+     OUT PPIA, AL
+     CALL TIMER
+     STC
+     ROL AL , 1
+     ROL BL, 1
+     DEC DL
+     JNZ L1
+     ;
+EX:     INT 3
+     
+     ;
+     
+TIMER :
+       MOV CX , 0FFFFH
+ TIMER1:     NOP
+       NOP
+       NOP
+       NOP
+       LOOP TIMER1
+       RET
+       
+       
+       CODE ENDS
+       END
+       
