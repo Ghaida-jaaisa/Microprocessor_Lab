@@ -88,3 +88,24 @@
 🔹 Update **Task 1**: if you **press key 3**, let the **motor move faster**.
 
 ---
+
+## LAB 5 – Dot Matrix I - Flash  |  📁 [Open Folder](LAB%205/)
+#### 🖥️ TASK #1  |  📄 [Open File](LAB%205/TASK%201)  
+🔹 Scroll from **top to bottom row** with **red color**.
+
+#### 💻 TASK #2  |  📄 [Open File](LAB%205/TASK%202)  
+🔹 Light a **4×4 square** in the **center** with **orange color**.
+
+#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%205/TASK%203)  
+🔹 Move the square from **center to top**, then come back from **bottom**, **3 times only**.
+
+#### 🖥️ TASK #4  |  📄 [Open File](LAB%205/TASK%204)  
+🔹 Light the **specific shape** as shown in the **figure**.
+
+#### 💻 TASK #5  |  📄 [Open File](LAB%205/TASK%205)  
+🔹 Show the **number of columns** equivalent to the number of **pressed buttons**.
+
+#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%205/TASK%206)  
+🔹 Move **any corner dot diagonally** in **any direction**, with **any color**, **forever**.
+
+---
