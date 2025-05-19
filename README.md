@@ -123,6 +123,7 @@
 #### 👨‍💻 TASK #3  |  📄 [Open File](LAB%206/TASK%203)  
 🖼️⬇️ Display the **specific figure** at the **bottom center** of Dot Matrix.
 ![image](https://github.com/user-attachments/assets/7c281ec7-16d7-4357-a34d-5c27fe4d80e8)
+---
 
 
 #### 🖥️ TASK #4  |  📄 [Open File](LAB%206/TASK%204)  
