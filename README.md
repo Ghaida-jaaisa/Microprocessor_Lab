@@ -112,6 +112,28 @@
 📍🟣⤴️ Move any **corner dot diagonally**, **any color**, **forever**.
 
 ---
+## LAB 6 – Dot Matrix - Scan  |  📁 [Open Folder](LAB%206/)
+#### 🖥️ TASK #1  |  📄 [Open File](LAB%206/TASK%201)  
+🔠✨ Display the **first letter of your name** on Dot Matrix.  
+➡️ (We choose the letter **H** as an example.)
+
+#### 💻 TASK #2  |  📄 [Open File](LAB%206/TASK%202)  
+🔤🔁 Show the word **CSE** **letter by letter**, repeated **3 times only**.
+
+#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%206/TASK%203)  
+🖼️⬇️ Display the **specific figure** at the **bottom center** of Dot Matrix.
+![image](https://github.com/user-attachments/assets/7c281ec7-16d7-4357-a34d-5c27fe4d80e8)
+
+
+#### 🖥️ TASK #4  |  📄 [Open File](LAB%206/TASK%204)  
+⤴️🔄 Update Task 3 to **move the shape upward**, then **re-enter from the bottom** — repeat **forever**.
+
+#### 💻 TASK #5  |  📄 [Open File](LAB%206/TASK%205)  
+🔁⏹️ Update Task 4 to make the movement happen **4 times only**, then stop.
+
+#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%206/TASK%206)  
+🔘🔢 Update Task 5 to repeat the shape movement **based on the number you pressed** on the **keypad**.
+
 
 
 
