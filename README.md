@@ -152,8 +152,8 @@
 
 #### 👨‍💻 TASK #6  |  📄 [Open File](LAB%207/TASK%206)  
 ⬆️⬇️ Handle both cases:  
-👉 Trigger this logic **only if button "2F"** is pressed.
+- 👉 Trigger this logic **only if button "2F"** is pressed.
 - If **cage is at floor > 2**, go **down to floor 2**.
---
-👉 Trigger this logic **only if button "3F"** is pressed.
+
+- 👉 Trigger this logic **only if button "3F"** is pressed.
 - If **cage is at floor < 3**, go **up to floor 3**.  
