@@ -100,10 +100,8 @@
 🔄🔳 Move the square from **center to top**, then come back from **bottom**, **3 times**.
 
 #### 🖥️ TASK #4  |  📄 [Open File](LAB%205/TASK%204)  
-🖼️🔆 Light the **specific shape** as shown in the **figure**.
---
+🖼️🔆 Light the **specific shape** as shown in the **figure**.  
 ![matrix](https://github.com/user-attachments/assets/f5915473-36cf-48a8-adc9-ea6f0611ce37)
-
 
 #### 💻 TASK #5  |  📄 [Open File](LAB%205/TASK%205)  
 🔘🔢 Show **number of columns** = **number of pressed buttons**.
@@ -112,6 +110,7 @@
 📍🟣⤴️ Move any **corner dot diagonally**, **any color**, **forever**.
 
 ---
+
 ## LAB 6 – Dot Matrix - Scan  |  📁 [Open Folder](LAB%206/)
 #### 🖥️ TASK #1  |  📄 [Open File](LAB%206/TASK%201)  
 🔠✨ Display the **first letter of your name** on Dot Matrix.  
@@ -121,10 +120,8 @@
 🔤🔁 Show the word **CSE** **letter by letter**, repeated **3 times only**.
 
 #### 👨‍💻 TASK #3  |  📄 [Open File](LAB%206/TASK%203)  
-🖼️⬇️ Display the **specific figure** at the **bottom center** of Dot Matrix.
+🖼️⬇️ Display the **specific figure** at the **bottom center** of Dot Matrix.  
 ![image](https://github.com/user-attachments/assets/7c281ec7-16d7-4357-a34d-5c27fe4d80e8)
----
-
 
 #### 🖥️ TASK #4  |  📄 [Open File](LAB%206/TASK%204)  
 ⤴️🔄 Update Task 3 to **move the shape upward**, then **re-enter from the bottom** — repeat **forever**.
@@ -135,12 +132,27 @@
 #### 👨‍💻 TASK #6  |  📄 [Open File](LAB%206/TASK%206)  
 🔘🔢 Update Task 5 to repeat the shape movement **based on the number you pressed** on the **keypad**.
 
+---
 
+## LAB 7 – Elevator  |  📁 [Open Folder](LAB%207/)
+#### 🖥️ TASK #1  |  📄 [Open File](LAB%207/TASK%201)  
+🔻🏢 If the **cage is at a higher floor**, move the **cage down** (with **red** LED).
 
+#### 💻 TASK #2  |  📄 [Open File](LAB%207/TASK%202)  
+⏹️ Let the **cage stop** at **floor 2**.
 
+#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%207/TASK%203)  
+7️⃣📟 Show the **floor number (2)** on the **7-Segment** once the cage stops.
 
+#### 🖥️ TASK #4  |  📄 [Open File](LAB%207/TASK%204)  
+💡🚪 Light the **floor sign LED** for **floor 2** once the cage stops.
 
+#### 💻 TASK #5  |  📄 [Open File](LAB%207/TASK%205)  
+🔘2️⃣ Repeat all previous tasks **only if you pressed** button "**2F**".
 
-
-
-
+#### 👨‍💻 TASK #6  |  📄 [Open File](LAB%207/TASK%206)  
+⬆️⬇️ Handle both cases:  
+👉 Trigger this logic **only if button "2F"** is pressed.
+- If **cage is at floor > 2**, go **down to floor 2**.
+👉 Trigger this logic **only if button "3F"** is pressed.
+- If **cage is at floor < 3**, go **up to floor 3**.  
