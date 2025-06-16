@@ -134,7 +134,7 @@
 
 ---
 
-## LAB 7 – Elevator  |  📁 [Open Folder](LAB%207/)
+## LAB 7 – Elevator - Part 1 |  📁 [Open Folder](LAB%207/)
 #### 🖥️ TASK #1  |  📄 [Open File](LAB%207/TASK%201)  
 🔻🏢 If the **cage is at a higher floor**, move the **cage down** (with **red** LED).
 
@@ -159,7 +159,7 @@
 - If **cage is at floor < 3**, go **up to floor 3**.  
 
 
-## LAB 8 – Elevator - Part 2  |  📁 [Open Folder](LAB%208/)
+## LAB 8 – Elevator - Part 2 |  📁 [Open Folder](LAB%208/)
 #### 🖥️ TASK #1  |  📄 [Open File](LAB%208/TASK%201)  
 🔢🔻 If the **cage is at floor 4** and you press button **1F**, let the cage **move and stop at floor 1**.
 
