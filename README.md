@@ -157,3 +157,21 @@
 
 - 👉 Trigger this logic **only if button "3F"** is pressed.
 - If **cage is at floor < 3**, go **up to floor 3**.  
+
+
+## LAB 8 – Elevator - Part 2  |  📁 [Open Folder](LAB%208/)
+#### 🖥️ TASK #1  |  📄 [Open File](LAB%208/TASK%201)  
+🔢🔻 If the **cage is at floor 4** and you press button **1F**, let the cage **move and stop at floor 1**.
+
+#### 💻 TASK #2  |  📄 [Open File](LAB%208/TASK%202)  
+📟💡 Update **Task 1** to **show the floor number on the 7-Segment** and **light the LED** for each floor it passes.
+
+#### 👨‍💻 TASK #3  |  📄 [Open File](LAB%208/TASK%203)  
+🔁🔢 Redo **Task 2** to **handle calls to floors 1, 2, or 3**, and let the cage **move and stop at the called floor**.
+
+#### 🖥️ TASK #4  |  📄 [Open File](LAB%208/TASK%204)  
+🚀🏢 Independent of the cage's current location, let the **elevator move and stop at the called floor**, showing:
+- ✅ All passed **floor numbers**
+- ✅ Relevant **LED signs**
+- ✅ Correct **7-Segment display**
+
