@@ -159,7 +159,7 @@
 - If **cage is at floor < 3**, go **up to floor 3**.  
 
 
-## LAB 8 – Elevator - Part 2 |  📁 [Open Folder](LAB%208/)
+## LAB 8 – Elevator - Part 2  |  📁 [Open Folder](LAB%208/)
 #### 🖥️ TASK #1  |  📄 [Open File](LAB%208/TASK%201)  
 🔢🔻 If the **cage is at floor 4** and you press button **1F**, let the cage **move and stop at floor 1**.
 
@@ -170,8 +170,11 @@
 🔁🔢 Redo **Task 2** to **handle calls to floors 1, 2, or 3**, and let the cage **move and stop at the called floor**.
 
 #### 🖥️ TASK #4  |  📄 [Open File](LAB%208/TASK%204)  
-🚀🏢 Independent of the cage's current location, let the **elevator move and stop at the called floor**, showing:
-- ✅ All passed **floor numbers**
-- ✅ Relevant **LED signs**
+🚀🏢 Independent of the cage's current location, let the **elevator move and stop at the called floor**, showing:  
+- ✅ All passed **floor numbers**  
+- ✅ Relevant **LED signs**  
 - ✅ Correct **7-Segment display**
+
+#### 💻 TASK #5  |  📄 [Open File](LAB%208/TASK%205)  
+🆙📉 Update **Task 4** to make it work even if the **cage position is between floors**, and continue to the **nearest called floor**, showing all details as usual.
 
