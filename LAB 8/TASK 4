@@ -1,1 +1,96 @@
+;;;;; IN PROGRESS --------------------------------------------------------------------------------
 
+CODE SEGMENT
+ASSUME CS : CODE , DS : CODE , ES  : CODE , SS : CODE
+
+PPI EQU 26H
+CPORT EQU  24H
+BPORT EQU 22H
+APORT EQU 20H
+
+ORG 1000H
+MOV AL , 90H
+OUT PPI , AL
+
+START :
+IN AL, APORT
+AND AL , 0FH
+MOV DL , 0FH
+SUB DL , AL
+MOV AL , DL
+MOV K_BUF, AL  ; STORE THE CALL VALUE (WHERE AM I GOING?)
+
+AGAIN :
+
+IN AL, APORT
+AND AL , 0FH
+MOV K_BUF, AL  ; STORE THE CALL VALUE (WHERE AM I GOING?)
+
+CMP AL ,  0EH ; CALL F1
+JE CALL_1
+CMP AL , 0DH ; CALL F2
+JE CALL_2
+CMP AL , 0FH    ; CALL F3
+JE CALL_3
+CMP AL , 07H   ; CALL F4
+JE CALL_4 ;
+JMP AGAIN
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;
+CALL_1:
+MOV AL , 0F9H
+OUT CPORT , AL
+
+REPEAT_1 :
+IN AL , APORT
+AND AL , 0F0H
+MOV DL , BYTE PTR K_BUF
+CMP AL , DL
+JE STOP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CALL_2 :
+IN AL , APORT    ;;
+AND AL , 0F0H
+
+CMP AL , 20H
+JG CALL_2_UP
+JL CALL_2_DOWN
+
+CALL_2_UP :
+MOV AL , 0F6H
+OUT CPORT , AL
+
+REPEAT_2_UP :
+IN AL , APORT
+AND AL , 0F0H
+MOV DL , BYTE PTR K_BUF
+CMP AL , DL
+JE STOP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CALL_2_DOWN :
+MOV AL , 0F9H
+OUT CPORT , AL
+
+REPEAT_2_DOWN :
+IN AL , APORT
+AND AL , 0F0H
+MOV DL , BYTE PTR K_BUF
+CMP AL , DL
+JE STOP
+
+STOP :
+MOV AL , 0FFH
+OUT CPORT , AL
+JMP START
+
+
+CALL_3 :
+CALL_4 :
+      
+K_BUF DB 1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      EXIT :
+       JMP START
+      INT 3;
+      CODE ENDS
+      END
