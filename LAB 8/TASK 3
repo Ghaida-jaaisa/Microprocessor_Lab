@@ -1,1 +1,133 @@
+CODE SEGMENT
+ASSUME CS : CODE , DS : CODE , ES  : CODE , SS : CODE
 
+PPI EQU 26H
+CPORT EQU  24H
+BPORT EQU 22H
+APORT EQU 20H
+
+ORG 1000H
+
+;IF YOU IN FLOOR 4 , PRESS B1 => GO TO FLOOR 1
+
+MOV AL , 90H
+OUT PPI , AL
+
+AGAIN :
+IN AL, APORT
+CMP AL , 8EH    ; IF YOU IN FLOOR 4 & PRESS 1
+JE GO_1
+CMP AL , 8DH    ; IF YOU IN FLOOR 4 & PRESS 2
+JE GO_2
+CMP AL , 8BH    ; IF YOU IN FLOOR 4 & PRESS 3
+JE GO_3
+JMP AGAIN
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;
+GO_1:
+MOV AL , 0F9H
+OUT CPORT , AL
+
+REPEAT :
+IN AL , APORT
+AND AL , 0F0H
+CMP AL , 40H
+JE IN_3
+
+CONT1 :
+IN AL , APORT
+AND AL , 0F0H
+CMP AL , 20H
+JE IN_2
+
+CONT2:
+IN AL , APORT
+AND AL , 0F0H
+CMP AL , 10H
+
+JE STOP
+JMP REPEAT
+
+
+STOP :
+      MOV AL , 0EFH
+      OUT CPORT , AL
+      MOV AL , 0F9H
+      OUT BPORT , AL
+      JMP EXIT
+
+ IN_3 :
+      MOV AL , 0B9H
+      OUT CPORT , AL
+      MOV AL , 0B0H
+      OUT BPORT , AL
+      JMP CONT1
+      
+  IN_2 :
+      MOV AL , 0D9H
+      OUT CPORT , AL
+      MOV AL , 0A4H
+      OUT BPORT , AL
+      JMP CONT2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+GO_2:
+MOV AL , 0F9H
+OUT CPORT , AL
+
+REPEAT2 :
+IN AL , APORT
+AND AL , 0F0H
+CMP AL , 40H
+JE IN_33
+
+CONT11 :
+IN AL , APORT
+AND AL , 0F0H
+CMP AL , 20H
+JE STOP2
+
+JMP REPEAT2
+
+
+STOP2 :
+      MOV AL , 0DFH
+      OUT CPORT , AL
+      MOV AL , 0A4H
+      OUT BPORT , AL
+      JMP EXIT
+
+ IN_33 :
+      MOV AL , 0B9H
+      OUT CPORT , AL
+      MOV AL , 0B0H
+      OUT BPORT , AL
+      JMP CONT11
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+GO_3:
+MOV AL , 0F9H
+OUT CPORT , AL
+
+REPEAT3:
+IN AL , APORT
+AND AL , 0F0H
+CMP AL , 40H
+JE STOP3
+JMP REPEAT3
+
+
+STOP3 :
+      MOV AL , 0BFH
+      OUT CPORT , AL
+      MOV AL , 0B0H
+      OUT BPORT , AL
+      JMP EXIT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      
+      EXIT :
+      
+      INT 3;
+      CODE ENDS
+      END
