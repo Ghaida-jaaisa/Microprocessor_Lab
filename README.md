@@ -121,7 +121,8 @@
 
 #### 👨‍💻 TASK #3  |  📄 [Open File](LAB%206/TASK%203)  
 🖼️⬇️ Display the **specific figure** at the **bottom center** of Dot Matrix.  
-![image](https://github.com/user-attachments/assets/7c281ec7-16d7-4357-a34d-5c27fe4d80e8)
+![image](https://github.com/user-attachments/assets/0458a1b2-9690-4e1c-aa19-0dcb2e2836c5)
+
 
 #### 🖥️ TASK #4  |  📄 [Open File](LAB%206/TASK%204)  
 ⤴️🔄 Update Task 3 to **move the shape upward**, then **re-enter from the bottom** — repeat **forever**.
