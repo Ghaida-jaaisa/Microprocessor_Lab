@@ -13,7 +13,7 @@ APORT EQU 20H
 ORG 1000H
 
          ; KEYPAD ON By Default
-
+Again:
           CALL SCAN  ;;   VALUE IS IN K_BUF
  
  
