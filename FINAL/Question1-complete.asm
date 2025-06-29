@@ -1,0 +1,70 @@
+CODE SEGMENT
+ASSUME CS : CODE , DS : CODE , ES  : CODE , SS : CODE
+
+; FOR KEYPAD
+KEY EQU 01H
+; FOR DOT MATRIX
+PPIC_C EQU 1EH
+PPIC EQU 1CH
+PPIB EQU 1AH
+PPIA EQU 18H
+
+ORG 1000H
+
+START :
+         ; DOT MATRIX
+         MOV AL , 80H
+         OUT PPIC_C, AL
+         ;
+         MOV AL , 10H
+         OUT PPIC , AL
+REPEAT :
+         CALL SCAN
+ CONT:
+         MOV AL , BYTE PTR MATRIX_VALUE
+         OUT PPIB , AL
+         OUT PPIA , AL
+
+         CALL TIMER
+          JMP REPEAT
+
+  RESIGN :
+          MOV  BYTE PTR MATRIX_VALUE  , 00H
+          JMP CONT
+
+
+SCAN: IN AL,KEY
+ TEST AL,10000000B
+ JNZ CONT
+ TEST AL,00010000B
+ JNZ CONT
+ ;
+ AND AL,00001111B
+ MOV BYTE PTR K_BUF,AL
+ ; key clear
+ OUT KEY,AL
+         CMP AL, 0FH
+         JE RESIGN
+ RET
+ ;
+ 
+  
+TIMER :
+       MOV CX , 0FFFFH
+ TIMER1:     NOP
+       NOP
+       NOP
+       NOP
+       LOOP TIMER1
+       RET 
+ 
+       JMP START
+
+
+K_BUF: DB 1
+MATRIX_VALUE: DB 0AAH
+      EXIT :
+
+      INT 3;
+      CODE ENDS
+      END
